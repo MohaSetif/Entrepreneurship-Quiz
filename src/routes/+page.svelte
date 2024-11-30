@@ -1,6 +1,7 @@
 <script lang="ts">
     import { fade, fly } from 'svelte/transition';
     import { goto } from '$app/navigation';
+    import encu_logo from "../lib/img/encu_logo.png"
     let team1Name = "الفريق الأول";
     let team2Name = "الفريق الثاني";
     let isConfiguring = false;
@@ -21,12 +22,19 @@
     }
 </script>
 
-<div class="min-h-screen bg-gradient-to-br from-indigo-950 to-orange-600 py-6 flex flex-col justify-center" dir="rtl">
+<div dir="rtl">
+
     <div class="relative py-3 sm:max-w-xl sm:mx-auto text-center">
         <div 
-            class="relative px-4 py-10 bg-white/90 backdrop-blur-sm mx-8 md:mx-0 shadow-2xl rounded-3xl sm:p-10"
+            class="relative p-4 bg-white/90 backdrop-blur-sm mx-8 md:mx-0 shadow-2xl rounded-3xl sm:p-4"
             transition:fade
         >
+            <img 
+                src={encu_logo} 
+                class="w-28 h-auto my-4 mx-auto"
+                alt="ENCU's Logo" 
+                style="max-width: 100px; height: auto; object-fit: contain;"
+            />
             <div class="max-w-md mx-auto">
                 {#if !isConfiguring}
                     <div 
@@ -135,8 +143,8 @@
         </div>
 
         <!-- Decorative Elements -->
-        <div class="absolute -top-10 -left-10 w-20 h-20 bg-orange-500 rounded-full opacity-20 animate-pulse"></div>
-        <div class="absolute -bottom-10 -right-10 w-20 h-20 bg-indigo-950 rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute -top-5 -left-5 w-20 h-20 bg-orange-500 rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute -bottom-5 -right-5 w-20 h-20 bg-indigo-950 rounded-full opacity-20 animate-pulse"></div>
     </div>
 </div>
 

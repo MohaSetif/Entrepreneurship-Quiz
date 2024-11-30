@@ -2,6 +2,7 @@
     import { onMount, onDestroy } from 'svelte';
     import { quizQuestions } from '$lib/questions';
     import type { Question, Team } from '$lib/types';
+	import { goto } from '$app/navigation';
 
     let currentQuestionIndex = 0;
     let timer = 30;
@@ -81,7 +82,7 @@
     });
 </script>
 
-<div class="h-screen w-screen overflow-hidden bg-gradient-to-br from-indigo-950 to-orange-600 flex items-center justify-center" dir="rtl">
+<div class="flex items-center justify-center" dir="rtl">
     <div class="w-full max-w-2xl mx-4">
         <div class="bg-white rounded-3xl shadow-2xl p-6">
             {#if !quizCompleted}
@@ -170,7 +171,7 @@
                     </div>
                     <button
                         class="mt-8 bg-indigo-950 text-white rounded-lg px-6 py-2 hover:bg-indigo-950"
-                        on:click={() => window.location.reload()}
+                        on:click={() => goto("/")}
                     >
                         العب مرة أخرى
                     </button>
