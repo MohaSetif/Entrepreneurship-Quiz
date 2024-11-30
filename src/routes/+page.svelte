@@ -31,9 +31,9 @@
         >
             <img 
                 src={encu_logo} 
-                class="w-28 h-auto my-4 mx-auto"
+                class="w-32 h-auto my-2 mx-auto"
                 alt="ENCU's Logo" 
-                style="max-width: 100px; height: auto; object-fit: contain;"
+                style="max-width: 120px; height: auto; object-fit: contain;"
             />
             <div class="max-w-md mx-auto">
                 {#if !isConfiguring}
