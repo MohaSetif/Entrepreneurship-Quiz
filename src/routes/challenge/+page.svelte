@@ -85,9 +85,7 @@
 
 <div class="flex items-center justify-center" dir="rtl">
     <div class="w-full max-w-2xl mx-4">
-        <div class="bg-white rounded-3xl shadow-2xl p-6"
-        transition:fade
-        >
+        <div class="bg-white rounded-3xl shadow-2xl p-6">
             {#if !quizCompleted}
                 <div class="w-full">
                     <div class="space-y-4">
