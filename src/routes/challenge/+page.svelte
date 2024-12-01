@@ -3,6 +3,7 @@
     import { quizQuestions } from '$lib/questions';
     import type { Question, Team } from '$lib/types';
 	import { goto } from '$app/navigation';
+	import { fade } from 'svelte/transition';
 
     let currentQuestionIndex = 0;
     let timer = 30;
@@ -84,7 +85,9 @@
 
 <div class="flex items-center justify-center" dir="rtl">
     <div class="w-full max-w-2xl mx-4">
-        <div class="bg-white rounded-3xl shadow-2xl p-6">
+        <div class="bg-white rounded-3xl shadow-2xl p-6"
+        transition:fade
+        >
             {#if !quizCompleted}
                 <div class="w-full">
                     <div class="space-y-4">

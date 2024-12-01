@@ -27,7 +27,6 @@
     <div class="relative py-3 sm:max-w-xl sm:mx-auto text-center">
         <div 
             class="relative p-4 bg-white/90 backdrop-blur-sm mx-8 md:mx-0 shadow-2xl rounded-3xl sm:p-4"
-            transition:fade
         >
             <img 
                 src={encu_logo} 
