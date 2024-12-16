@@ -4,7 +4,7 @@
     import type { Question, Team } from '$lib/types';
 	import { goto } from '$app/navigation';
 	import { fade } from 'svelte/transition';
-    import qr_code from "$lib/img/encu_forms.jpeg"
+    import qr_code from "$lib/img/winner_forms.jpeg"
 
     let currentQuestionIndex = 0;
     let timer = 30;
