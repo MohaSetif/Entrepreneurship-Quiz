@@ -4,6 +4,7 @@
     import type { Question, Team } from '$lib/types';
 	import { goto } from '$app/navigation';
 	import { fade } from 'svelte/transition';
+    import qr_code from "$lib/img/encu_forms.jpeg"
 
     let currentQuestionIndex = 0;
     let timer = 30;
@@ -19,7 +20,7 @@
     ];
 
     function startTimer() {
-        timer = 30;
+        timer = 45;
         timerInterval = setInterval(() => {
             if (timer > 0 && !selectedAnswer) {
                 timer--;
@@ -157,7 +158,8 @@
             {:else}
                 <div class="text-center">
                     <h2 class="text-2xl font-bold mb-4">انتهى الاختبار!</h2>
-                    <div class="space-y-4">
+                    <div class="space-y-4 flex flex-col justify-center items-center">
+                        <img src={qr_code} class="h-32 w-auto" alt="encu_forms">
                         <p class="text-xl">نتيجة {teams[0].name}: {teams[0].score} نقطة</p>
                         <p class="text-xl">نتيجة {teams[1].name}: {teams[1].score} نقطة</p>
                         <p class="text-2xl font-bold mt-4">
@@ -176,7 +178,7 @@
                     >
                         العب مرة أخرى
                     </button>
-                </div>
+                </div>            
             {/if}
         </div>
     </div>
