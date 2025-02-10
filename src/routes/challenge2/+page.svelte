@@ -114,7 +114,7 @@
 
 <div class="fixed inset-0 p-4 flex items-center justify-center" dir="rtl">
     <div class="w-full max-w-2xl mx-auto bg-white rounded-3xl shadow-2xl flex flex-col h-[90vh]">
-        <div class="p-6 flex flex-col h-full">
+        <div class="p-6 flex flex-col h-full space-y-12">
             {#if !gameCompleted}
                 <div class="flex flex-col h-full" in:fade>
                     <div class="flex-shrink-0">
@@ -147,6 +147,19 @@
                 <div class="h-full overflow-y-auto text-center space-y-4" in:fly={{ y: 20, duration: 500 }} out:fly={{ y: -20, duration: 500 }}>
                     <h2 class="text-2xl font-bold mb-4">انتهت اللعبة!</h2>
                     <p class="text-xl">لقد رتبت {score} خطوات بشكل صحيح من أصل 10</p>
+                     <div class="mt-4">
+                        <h3 class="font-bold mb-2">الترتيب الصحيح:</h3>
+                        <ul class="space-y-2 text-right">
+                            {#each startupSteps.sort((a, b) => a.correctOrder - b.correctOrder) as step, index}
+                                <li 
+                                    class="p-3 bg-gray-100 rounded-lg"
+                                    in:fly={{ x: -20, delay: index * 100, duration: 300 }}
+                                >
+                                    {index + 1}. {step.content}
+                                </li>
+                            {/each}
+                        </ul>
+                    </div>
                 </div>
                 <button class="mt-8 mb-4 bg-indigo-600 text-white rounded-lg px-6 py-2 hover:bg-indigo-700 transform transition-transform duration-200 hover:scale-105 active:scale-95" on:click={restartGame}>العب مرة أخرى</button>
             {/if}
