@@ -10,3 +10,9 @@ export interface Team {
     score: number;
     questionsAnswered: number;
 }
+
+export interface Step {
+    id: number;
+    content: string;
+    correctOrder: number;
+}

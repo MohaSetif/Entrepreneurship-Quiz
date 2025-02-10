@@ -37,7 +37,7 @@
             <div class="max-w-md mx-auto">
                 {#if !isConfiguring}
                     <div 
-                        class="space-y-8"
+                        class="space-y-4"
                         in:fly="{{ y: 50, duration: 500 }}"
                     >
                         <h1 class="text-4xl font-bold text-gray-800 mb-4">
@@ -70,12 +70,21 @@
                             </ul>
                         </div>
 
-                        <button
+                        <div class="flex gap-2">
+                            <button
                             class="w-full bg-gradient-to-r from-indigo-950 to-orange-600 text-white rounded-lg px-4 py-3 mt-6 hover:opacity-90 transform transition hover:scale-105 font-bold text-lg"
                             on:click={() => isConfiguring = true}
-                        >
-                            ابدأ التحدي!
-                        </button>
+                            >
+                                ابدأ التحدي الأول!
+                            </button>
+
+                            <a
+                                class="w-full bg-gradient-to-r from-indigo-950 to-orange-600 text-white rounded-lg px-4 py-3 mt-6 hover:opacity-90 transform transition hover:scale-105 font-bold text-lg"
+                                href="/challenge2"
+                            >
+                                ابدأ التحدي الثاني!
+                            </a>
+                        </div>
                     </div>
                 {:else}
                     <div 
