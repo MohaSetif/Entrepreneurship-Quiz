@@ -3,52 +3,52 @@ import type { Step } from "./types";
 export const startupSteps: Step[] = [
     {
         id: 1,
-        content: "تحديد المشكلة وإيجاد الحل المناسب",
+        content: "تحديد الفكرة الرئيسية",
         correctOrder: 0
     },
     {
         id: 2,
-        content: "دراسة السوق والمنافسين",
+        content: "دراسة السوق",
         correctOrder: 1
     },
     {
         id: 3,
-        content: "إنشاء خطة العمل",
+        content: "كتابة خطة العمل",
         correctOrder: 2
     },
     {
         id: 4,
-        content: "تحديد الفئة المستهدفة",
+        content: "البحث عن مصادر التمويل",
         correctOrder: 3
     },
     {
         id: 5,
-        content: "تطوير النموذج الأولي",
+        content: "تسجيل المشروع قانونيا",
         correctOrder: 4
     },
     {
         id: 6,
-        content: "جمع التغذية الراجعة من المستخدمين",
+        content: "بناء الفريق",
         correctOrder: 5
     },
     {
         id: 7,
-        content: "تحسين المنتج بناءً على التغذية الراجعة",
+        content: "تطوير المنتج أو الخدمة",
         correctOrder: 6
     },
     {
         id: 8,
-        content: "إعداد خطة التسويق",
+        content: "إطلاق المشروع",
         correctOrder: 7
     },
     {
         id: 9,
-        content: "تأمين التمويل اللازم",
+        content: "تسويق المنتج",
         correctOrder: 8
     },
     {
         id: 10,
-        content: "إطلاق المنتج في السوق",
+        content: "قياس الأداء و تحسينه",
         correctOrder: 9
     }
 ];
