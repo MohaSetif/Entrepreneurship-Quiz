@@ -84,6 +84,13 @@
                             >
                                 ابدأ التحدي الثاني!
                             </a>
+
+                            <a
+                                class="w-full bg-gradient-to-r from-indigo-950 to-orange-600 text-white rounded-lg px-4 py-3 mt-6 hover:opacity-90 transform transition hover:scale-105 font-bold text-lg"
+                                href="/challenge3"
+                            >
+                                ابدأ التحدي الثالث!
+                            </a>
                         </div>
                     </div>
                 {:else}

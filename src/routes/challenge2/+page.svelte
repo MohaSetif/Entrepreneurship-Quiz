@@ -3,6 +3,7 @@
     import { fade, fly, scale, slide } from 'svelte/transition';
     import { flip } from 'svelte/animate';
     import type { Step } from '$lib/types';
+    import qr_code from "$lib/img/winner_forms.jpeg";
     import { startupSteps } from '$lib/startup_steps';
     import { GripVertical } from 'lucide-svelte';
 
@@ -159,6 +160,14 @@
                                 </li>
                             {/each}
                         </ul>
+                    </div>
+                    <div class="flex flex-col justify-center items-center gap-4 mt-6">
+                        <img
+                            src={qr_code}
+                            alt="QR code"
+                            class="w-28 h-28 sm:w-36 sm:h-36 object-contain border border-gray-300 rounded-md shadow"
+                        />
+                        <h2 class="text-xl font-bold">امسح الكود!</h2>
                     </div>
                 </div>
                 <button class="mt-8 mb-4 bg-indigo-600 text-white rounded-lg px-6 py-2 hover:bg-indigo-700 transform transition-transform duration-200 hover:scale-105 active:scale-95" on:click={restartGame}>العب مرة أخرى</button>
